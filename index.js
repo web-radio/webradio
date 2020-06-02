@@ -13,6 +13,11 @@ const radios = [{
         src: "http://mp3.polskieradio.pl:8904/;",
         type: "audio/mp3"
     },
+	{
+        name: "Czwórka",
+        src: "http://mp3.polskieradio.pl:8906/;",
+        type: "audio/mp3"
+    },
     {
         name: "RMF FM",
         src: "http://195.150.20.242:8000/rmf_fm",
