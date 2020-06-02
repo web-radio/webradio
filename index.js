@@ -1,4 +1,4 @@
-var radios = [{
+const radios = [{
         name: "Jedynka",
         src: "http://mp3.polskieradio.pl:8900/;",
         type: "audio/mp3"
