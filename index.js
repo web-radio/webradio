@@ -313,5 +313,5 @@ const radios = [{
 const content = document.querySelector('#content');
 
 radios.forEach((elem) => {
-    content.innerHTML += `<p>${elem.name}</p><audio src="${elem.src}" type="${elem.type}" controls></audio>`;
+    content.innerHTML += `<p>${elem.name}</p><audio src="${elem.src}" type="${elem.type}" preload="none" controls></audio>`;
 });
