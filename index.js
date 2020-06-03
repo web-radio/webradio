@@ -104,7 +104,7 @@ const radios = [{
         type: "audio/mp3"
     },
     {
-        name: "Białoruskie radio racja",
+        name: "Białoruskie Radio Racja",
         src: "http://air.racyja.com:8000/racja256",
         type: "audio/mp3"
     },
@@ -301,11 +301,6 @@ const radios = [{
     {
         name: "ESKA Trójmiasto",
         src: "http://waw02-03.ic.smcdn.pl:8000/t048-1.mp3",
-        type: "audio/mp3"
-    },
-    {
-        name: "Złote przeboje Gdańsk",
-        src: "http://stream10.radioagora.pl/zp_gda_128.mp3",
         type: "audio/mp3"
     },
     {
