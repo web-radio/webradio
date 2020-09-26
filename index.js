@@ -307,6 +307,11 @@ const radios = [{
         name: "Radio Kaszebe",
         src: "http://stream3.nadaje.com:8048/;",
         type: "audio/mp3"
+    },
+    {
+        name: "Dark Radio",
+        src: "http://dark.sh/mp3",
+        type: "audio/mp3"
     }
 ];
 

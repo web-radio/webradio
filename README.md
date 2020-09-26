@@ -78,3 +78,4 @@ Jeśli chcesz dodać stację radiową której nie ma na poniższej liście może
 | 59 | RMF MAXXX | http://195.150.20.242:8000/rmf_maxxx |
 | 60 | ESKA Trójmiasto | http://waw02-03.ic.smcdn.pl:8000/t048-1.mp3 |
 | 61 | Radio Kaszebe | http://stream3.nadaje.com:8048/; |
+| 62 | Dark Radio | http://dark.sh/mp3 |
