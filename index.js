@@ -311,12 +311,17 @@ const radios = [{
     {
         name: "Dark Radio",
         src: "http://dark.sh/mp3",
-        type: "audio/mp3"
+        type: "audio/mp3",
+        last: true
     }
 ];
 
 const content = document.querySelector('#content');
 
 radios.forEach((elem) => {
-    content.innerHTML += `<p>${elem.name}</p><audio src="${elem.src}" type="${elem.type}" preload="none" controls></audio>`;
+		if(elem.last) {
+			content.innerHTML += `<p>${elem.name}</p><audio src="${elem.src}" type="${elem.type}" preload="none" class="radioElementLast" controls></audio>`;
+		} else {
+			content.innerHTML += `<p>${elem.name}</p><audio src="${elem.src}" type="${elem.type}" preload="none" class="radioElement" controls></audio>`;
+		}
 });
