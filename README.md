@@ -79,3 +79,4 @@ Jeśli chcesz dodać stację radiową której nie ma na poniższej liście może
 | 60 | ESKA Trójmiasto | http://waw02-03.ic.smcdn.pl:8000/t048-1.mp3 |
 | 61 | Radio Kaszebe | http://stream3.nadaje.com:8048/; |
 | 62 | Dark Radio | http://dark.sh/mp3 |
+| 63 | Radio Nowy Świat | https://stream.rcs.revma.com/ypqt40u0x1zuv |
