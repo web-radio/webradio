@@ -314,17 +314,11 @@ const radios = [{
         type: "audio/mp3",
         last: true
     },
-	
-
-	
-
-	
-
-	
-
-	
-
-		
+    {
+        name: "Radio Nowy Świat",
+        src: "https://stream.rcs.revma.com/ypqt40u0x1zuv",
+        type: "audio/mp3"
+    }	
 ];
 
 const content = document.querySelector('#content');
