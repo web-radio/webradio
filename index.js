@@ -316,7 +316,7 @@ const radios = [{
     },
     {
         name: "Radio Nowy Świat",
-        src: "https://stream.rcs.revma.com/ypqt40u0x1zuv",
+        src: "http://stream.rcs.revma.com/ypqt40u0x1zuv",
         type: "audio/mp3"
     }	
 ];
