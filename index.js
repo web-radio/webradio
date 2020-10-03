@@ -1,5 +1,5 @@
 var req = new XMLHttpRequest();
-req.open('GET', 'http://', false); 
+req.open('GET', 'https://raw.githubusercontent.com/web-radio/webradio/master/radios.json', false); 
 req.send(null);
 if(req.status == 200)
   const radios = req.responseText
