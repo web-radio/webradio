@@ -13,9 +13,9 @@ searchButton.addEventListener("click", () => {
 		list.forEach((elem) => {
 		content.innerHTML += `<p>${elem.name}</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" class="radioElementLast" controls></audio>`
 });
-	}
-	
-  req.open('GET', `https://de1.api.radio-browser.info/json/stations/byname/${searcher}`, false); 
+	} else {
+		console.log(searcher)
+		req.open('GET', `https://de1.api.radio-browser.info/json/stations/byname/${searcher}`, false); 
   req.send(null);
   let radios = JSON.parse(req.response)
 	
@@ -24,5 +24,6 @@ searchButton.addEventListener("click", () => {
 	radios.forEach((elem) => {
 		content.innerHTML += `<p>${elem.name}</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" class="radioElementLast" controls></audio>`
 });
+	}
 });
 
