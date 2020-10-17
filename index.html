@@ -1,26 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<meta charset="utf-8"/>
-	<title>Webradio</title>
-	<link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta charset="utf-8"/>
+    <title>Webradio</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1>Webradio</h1>
-		</div>
-		<div id="greeting">
-			<p>Witaj na stronie! Znajdziesz tutaj różne stacje radiowe.
-				<br />
-				Wyszukaj stacje: </p><input id="search" type="search" placeholder="RMF FM"><input id="searchbutton" type="submit" value="Wyszukaj!"><br/>
-				Uwaga: funkcja eksperymentalna, mogą wystąpić błędy
-		</div>
-		<div id="content">
-			
-		</div>
-		<a href="mailto: web-radio.cf@outlook.com">Nie widzisz swojego radia? Kliknij tutaj aby wysłać nam maila!</a>
-	</div>
-	<script src="index.js" type="application/javascript"></script>
-</body>
-</html>
+<!--TODO: Add responsive -->
+<div id="container">
+    <div id="header">
+        <h1>Webradio</h1>
+    </div>
+    <div id="greeting">
+        <p>Witaj na stronie! Znajdziesz tutaj różne stacje radiowe.
+            <br/>
+            Wyszukaj stacje: </p><input id="search" type="search" placeholder="RMF FM"><input id="searchbutton"
+                                                                                              type="submit"
+                                                                                              value="Wyszukaj!"><br/>
+        <button id="loadRadios">
+            Wczytaj radia(lepiej użyć wyszukiwarki, ta funkcja może spowolnić urządzenie)
+        </button>
+        <br/>
+        Uwaga: funkcja eksperymentalna, mogą wystąpić błędy
+    </div>
+    <div id="content">
+
+    </div>
+    <a href="mailto: web-radio.cf@outlook.com">Nie widzisz swojego radia? Kliknij tutaj aby wysłać nam maila!</a>
+</div>
+<script src="index.js" type="application/javascript"/>
