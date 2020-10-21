@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7410627-964d-4f12-8889-856f82a267e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -56,7 +57,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v12.18.4/bin/node" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="inlay.hints.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,7 +69,9 @@
       <option name="presentableId" value="Default" />
       <updated>1602936835064</updated>
       <workItem from="1602936842793" duration="1167000" />
-      <workItem from="1602939504004" duration="2171000" />
+      <workItem from="1602939504004" duration="3017000" />
+      <workItem from="1602941140983" duration="1474000" />
+      <workItem from="1603292976013" duration="488000" />
     </task>
     <servers />
   </component>
@@ -92,9 +95,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="417" y="184" width="1086" height="712" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/304.1080.1366.768@0.0.1920.1080" timestamp="1602937318997" />
-    <state x="460" y="162" key="SettingsEditor" timestamp="1602940492679">
+    <state x="460" y="162" key="SettingsEditor" timestamp="1602942099102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="460" y="162" key="SettingsEditor/0.0.1920.1080/304.1080.1366.768@0.0.1920.1080" timestamp="1602940492679" />
+    <state x="460" y="162" key="SettingsEditor/0.0.1920.1080/304.1080.1366.768@0.0.1920.1080" timestamp="1602942099102" />
   </component>
 </project>

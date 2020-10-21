@@ -6,7 +6,7 @@ const req = new XMLHttpRequest();
 
 searchButton.addEventListener("click", () => {
     content.innerHTML = ''
-    if (searcher == "radios.json") {
+    if (searcher.value === "radios.json") {
         req.open('GET', 'https://raw.githubusercontent.com/web-radio/webradio/master/radios.json', false);
         req.send(null);
         const list = JSON.parse(req.response)
@@ -21,7 +21,7 @@ searchButton.addEventListener("click", () => {
 
         console.log(radios)
 
-        if (radios.length == 0) {
+        if (radios.length === "0") {
             content.style.display = "block";
             content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">Nie znaleziono żadnych stacji!</p>`
         }

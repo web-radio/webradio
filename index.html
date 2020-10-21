@@ -13,15 +13,40 @@
     <div id="greeting">
         <p>Witaj na stronie! Znajdziesz tutaj różne stacje radiowe.
             <br/>
-            Wyszukaj stacje: </p><input id="search" type="text" placeholder="RMF FM"><input id="searchbutton"
-                                                                                            type="submit"
-                                                                                            value="Wyszukaj!"><br/>
+            <label for="search">Wyszukaj stacje: </label></p><input name="search" id="search" type="text"
+                                                                    placeholder="RMF FM"><input id="searchbutton"
+                                                                                                type="submit"
+                                                                                                value="Wyszukaj!"><br/>
     </div>
     <div id="content">
 
     </div>
     <a href="mailto: web-radio.cf@outlook.com">Nie widzisz swojego radia? Kliknij tutaj aby wysłać nam maila!</a>
 </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAs4WSvyBoODJIi2VgBwZDZTwhRiBm3-e4",
+        authDomain: "webradio-3904f.firebaseapp.com",
+        databaseURL: "https://webradio-3904f.firebaseio.com",
+        projectId: "webradio-3904f",
+        storageBucket: "webradio-3904f.appspot.com",
+        messagingSenderId: "96382163337",
+        appId: "1:96382163337:web:15c8acd210a462da4b6958",
+        measurementId: "G-6B26PSM2BT"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
 <script src="index.js" type="application/javascript"></script>
 </body>
 </html>
