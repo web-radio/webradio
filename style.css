@@ -43,4 +43,12 @@ a {
 #search {
     margin: 15px;
     padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#searchbutton {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
 }
