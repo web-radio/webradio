@@ -9,7 +9,7 @@ searchButton.addEventListener("click", () => {
             .then(response => response.json())
             .then(data => {
                 data.forEach((elem) => {
-                    content.innerHTML += `<p>${elem.name}</p><audio src="${elem.src}" type="${elem.codec}" preload="none" class="radioElementLast" controls></audio>`
+                    content.innerHTML += `<div><p>${elem.name}</p><audio src="${elem.src}" type="${elem.codec}" preload="none" class="radioElementLast" controls></audio></div>`
                 })
             })
     } else {
@@ -22,7 +22,7 @@ searchButton.addEventListener("click", () => {
                 } else {
                     data.forEach((elem) => {
                         content.style.display = "grid";
-                        content.innerHTML += `<p>${elem.name}</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" class="radioElementLast" controls></audio>`
+                        content.innerHTML += `<div><p>${elem.name}</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" controls></audio></div>`
                     });
                 }
             })

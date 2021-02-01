@@ -21,14 +21,9 @@ body {
 
 #content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0 0;
-}
-
-.radioElement {
-    margin: 10px;
-    padding: 5px;
 }
 
 .radioElementLast {
@@ -51,4 +46,9 @@ a {
     border-radius: 5px;
     border: none;
     padding: 5px;
+}
+
+.radioElement {
+    text-align: center;
+    height: 100px;
 }
