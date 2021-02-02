@@ -23,7 +23,7 @@ searchButton.addEventListener("click", () => {
             .then(data => {
                 if (data.length === 0) {
                     content.style.display = "block";
-                    content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">Nie znaleziono żadnych stacji!</p>`
+                    content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">No stations found!</p>`
                 } else {
                     data.forEach((elem) => {
                         content.style.display = "grid";

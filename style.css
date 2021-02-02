@@ -1,11 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
 body {
-    background-color: #323232;
+    height: 100vh;
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.9)),to(rgba(0,0,0,.9))),url('wallpaper.jpg');
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('wallpaper.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    overflow: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
     color: #efefef;
     font-family: 'Lato', sans-serif;
     text-align: center;
     font-size: 20px;
+    margin-top: 10vh;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0 0;
 }
 
 #container {
@@ -17,13 +38,6 @@ body {
 #header {
     text-transform: uppercase;
     font-size: 24px;
-}
-
-#content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0 0;
 }
 
 .radioElementLast {
@@ -51,4 +65,12 @@ a {
 .radioElement {
     text-align: center;
     height: 100px;
+}
+
+#blue {
+    color: blue;
+}
+
+#red {
+    color: #d43f3f;
 }
