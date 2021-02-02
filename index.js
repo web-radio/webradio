@@ -29,7 +29,7 @@ searchButton.addEventListener("click", () => {
                         content.style.display = "grid";
                         content.innerHTML += `<div data-uuid="${elem.stationuuid}"><p>${elem.name}</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" controls></audio><input type="checkbox"></div>`
                     });
-                    note.innerHTML = "<p>Uwaga: jeśli pojawia się kilka stacji z tą samą nazwą, zazwyczaj mają one rózny <a style=\"display:inline\" href=\"https://pl.wikipedia.org/wiki/Przep%C5%82ywno%C5%9B%C4%87\">bitrate</a>.</p>"
+                    note.innerHTML = "<p>Note: if several stations with the same name appear, they usually have a different <a style=\"display:inline\" href=\"https://en.wikipedia.org/wiki/Bit_rate\">bitrate</a>.</p>"
                 }
             })
     }
