@@ -27,7 +27,7 @@ searchButton.addEventListener("click", () => {
                 } else {
                     data.forEach((elem) => {
                         content.style.display = "grid";
-                        content.innerHTML += `<div data-uuid="${elem.stationuuid}"><p>${elem.name}</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" controls></audio>`
+                        content.innerHTML += `<div data-uuid="${elem.stationuuid}"><p>${elem.name}</p><p>Bitrate: ${elem.bitrate}kbps</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" controls></audio>`
                     });
                     note.innerHTML = "<p>Note: if several stations with the same name appear, they usually have a different <a style=\"display:inline\" href=\"https://en.wikipedia.org/wiki/Bit_rate\">bitrate</a>.</p>"
                 }
