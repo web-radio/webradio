@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
+@media screen and (max-width: 800px) {
+    #content {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0 0;
+    }
+  } 
+
 body {
-    height: 100vh;
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.9)),to(rgba(0,0,0,.9))),url('../wallpaper.jpg');
-    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../wallpaper.jpg');
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.9)),to(rgba(0,0,0,.9))),url('https://raw.githubusercontent.com/web-radio/webradio/master/wallpaper.jpg');
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('https://raw.githubusercontent.com/web-radio/webradio/master/wallpaper.jpg');
     background-size: cover;
-    background-position: 50%;
     background-attachment: fixed;
     overflow: auto;
     -webkit-box-align: center;
@@ -14,7 +21,6 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
     color: #efefef;
     font-family: 'Lato', sans-serif;
     text-align: center;
@@ -30,7 +36,7 @@ body {
 }
 
 #container {
-    width: 1000px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -64,7 +70,8 @@ a {
 
 .radioElement {
     text-align: center;
-    height: 100px;
+    height: 30%;
+    width: 100%;
 }
 
 #blue {
