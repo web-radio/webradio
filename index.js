@@ -3,6 +3,17 @@ const content = document.querySelector('#content');
 const note = document.getElementById("note")
 const searcher = document.getElementById("search");
 
+const subheader = document.querySelector("#subheader")
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("https://raw.githubusercontent.com/web-radio/webradio/master/languages/english.json")
+        .then(response => response.json())
+        .then(data => {
+            subheader.textContent = data.header
+            console.log(data)
+        })
+})
+
 searchButton.addEventListener("click", () => {
     content.innerHTML = ''
     if (searcher.value === "radios.json" || searcher.value === "all" || searcher.value === "wszystkie") {
