@@ -16,7 +16,7 @@ searchButton.addEventListener("click", () => {
             })
     } else if(searcher.value == "") {
         content.style.display = "block";
-        content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">Myśl trochę. Nic nie wpisałeś.</p>`
+        content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">Think a little. You didn't enter anything.</p>`
     } else {
         fetch(`https://de1.api.radio-browser.info/json/stations/byname/${searcher.value}`)
             .then(response => response.json())

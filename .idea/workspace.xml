@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f7410627-964d-4f12-8889-856f82a267e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1j0Mza3JXdabgrKITRCQl4rXGcb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -87,7 +91,8 @@
       <workItem from="1603294392221" duration="502000" />
       <workItem from="1611319598262" duration="1537000" />
       <workItem from="1612217417659" duration="2305000" />
-      <workItem from="1612249887786" duration="3264000" />
+      <workItem from="1612249887786" duration="5676000" />
+      <workItem from="1612359445952" duration="531000" />
     </task>
     <servers />
   </component>
