@@ -3,7 +3,7 @@
 Strona z radiami internetowymi.
 
 # Schemat dodania stacji radiowej
-Jeśli chcesz dodać stację radiową której nie ma na poniższej liście możesz użyć tego schematu w index.js:
+Jeśli chcesz dodać stację radiową której nie ma na poniższej liście możesz użyć tego schematu w radios.json:
 
 ```js
 {
