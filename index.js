@@ -4,9 +4,36 @@ const content = document.querySelector('#content');
 const note = document.getElementById("note")
 const searcher = document.getElementById("search");
 
+const langCheckbox = document.querySelector("#langCheckbox")
+
 const subheader = document.querySelector("#subheader")
 const searchLabel = document.querySelector("#searchLabel")
+const langLabel = document.querySelector("#langLabel")
 const legacyInfo = document.querySelector("#legacyInfo")
+
+langCheckbox.addEventListener("click", () => {
+    if (langCheckbox.checked) {
+        fetch("https://raw.githubusercontent.com/web-radio/webradio/master/languages/polish.json")
+            .then(response => response.json())
+            .then(data => {
+                lang = data
+                subheader.textContent = data.header
+                searchLabel.textContent = data.searchText
+                langLabel.textContent = data.langInfo
+                legacyInfo.textContent = data.legacyInfo
+            })
+    } else {
+        fetch("https://raw.githubusercontent.com/web-radio/webradio/master/languages/english.json")
+            .then(response => response.json())
+            .then(data => {
+                lang = data
+                subheader.textContent = data.header
+                searchLabel.textContent = data.searchText
+                langLabel.textContent = data.langInfo
+                legacyInfo.textContent = data.legacyInfo
+            })
+    }
+})
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch("https://raw.githubusercontent.com/web-radio/webradio/master/languages/polish.json")
@@ -15,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
             lang = data
             subheader.textContent = data.header
             searchLabel.textContent = data.searchText
+            langLabel.textContent = data.langInfo
             legacyInfo.textContent = data.legacyInfo
-            console.log(data)
         })
 })
 

@@ -23,6 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/english.json" beforeDir="false" afterPath="$PROJECT_DIR$/languages/english.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/polish.json" beforeDir="false" afterPath="$PROJECT_DIR$/languages/polish.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <workItem from="1611319598262" duration="1537000" />
       <workItem from="1612217417659" duration="2305000" />
       <workItem from="1612249887786" duration="5676000" />
-      <workItem from="1612359445952" duration="1640000" />
+      <workItem from="1612359445952" duration="2860000" />
     </task>
     <servers />
   </component>
