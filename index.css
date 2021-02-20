@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+span.mdi {
+    font-size: 20px;
+}
+
+.searcher {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 200px;
+}
+
+.mdc-text-field {
+    height: 40px !important;
+}
+
+.mdc-card {
+    margin: 15px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+}
+
+.mdc-card__media {
+    height: 70px;
+}
+
+.stationName {
+    font-size: 20px;
+}
+
+.controls-play {
+    margin-top: auto;
+}

@@ -19,40 +19,57 @@
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
     <meta http-equiv='x-dns-prefetch-control' content='off'>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <link rel="stylesheet" href="index.css" type="text/css"/>
+    <link rel="stylesheet" href="node_modules/@mdi/font/css/materialdesignicons.css">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="container">
-    <div id="header">
-        <h1><span id='blue'>Web</span><span class='red'>radio</span></h1>
-    </div>
-    <div id="greeting">
-        <p id="subheader"></p>
-        <label class="switch">
-            <input id="langCheckbox" checked type="checkbox">
-            <span class="slider round"></span>
-        </label><span style="margin-left: 5px;" id="langLabel"></span><br>
-            <label id="searchLabel" for="search"></label><input name="search" id="search" type="text"
-                                                                    placeholder="RMF FM"><input id="searchbutton"
-                                                                                                type="submit"><br>
-        <a id="legacyInfo" href="./legacy/legacy.html"></a><br><br>
-    </div>
-    <div id="content">
 
-    </div>
-    <div id="note">
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+                <span class="mdc-top-app-bar__title">Webradio 2.0 prerelease</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <!--<input type="text" class="searchInput" placeholder="RMF FM" aria-label="Searcher">-->
+                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label">
+                    <span class="mdc-text-field__ripple"></span>
+                    <input class="mdc-text-field__input searchInput" type="text" placeholder="RMF FM" aria-label="Label">
+                    <span class="mdc-line-ripple"></span>
+                </label>
+                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button searchSubmit" aria-label="Search Submit">search</button>
+                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+            </section>
+        </div>
+    </header>
+    <main class="mdc-top-app-bar--fixed-adjust content"></main>
 
-    </div>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!--<div class="searcher">
+        <input type="text" placeholder="RMF FM" class="searchInput">
+        <button class="searchSubmit">
+            <span class="mdi mdi-magnify search"></span>
+        </button>
+    </div>-->
+
+    <!--<div class="radioPlayer">
+        <span class="radioName">RMF FM</span>
+        <button data-playing="false" class="controls-play" role="switch" aria-checked="false">
+            <span class="mdi mdi-play play"></span>
+        </button>
+    </div>-->
+</div>
+
 <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use323232
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-
 <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    import {MDCTopAppBar} from '@material/top-app-bar';
     var firebaseConfig = {
         apiKey: "AIzaSyAs4WSvyBoODJIi2VgBwZDZTwhRiBm3-e4",
         authDomain: "webradio-3904f.firebaseapp.com",
@@ -66,7 +83,11 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+
+    // Instantiation
+    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+    const topAppBar = new MDCTopAppBar(topAppBarElement);
 </script>
-<script src="index.js" type="application/javascript"></script></div></div>
+<script src="index.js" type="application/javascript"></script>
 </body>
 </html>
