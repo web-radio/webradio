@@ -38,3 +38,8 @@ span.mdi {
 .controls-play {
     margin-top: auto;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}

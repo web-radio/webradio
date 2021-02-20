@@ -19,15 +19,13 @@ searchSubmit.addEventListener('click', () => {
                 const stationFavicon = elem.favicon
                 const testAudioStream = new Audio(stationURL)
 
-                testAudioStream.onloadeddata = () => {
-                    const cardTemplate = document.createElement('div')
-                    cardTemplate.classList = 'mdc-card mdc-card-outlined'
-                    cardTemplate.innerHTML = `<div class="my-card__media mdc-card__media mdc-card__media--16-9"><img src="${stationFavicon}" class="mdc-card__media-content" alt="Station Favicon" width="64" height="64"></div><span class="stationName">${stationName}</span><button data-playing="false" class="controls-play" role="switch" aria-checked="false"><span class="mdi mdi-play play"></span><audio src="${stationURL}"></audio></button>`
+                const cardTemplate = document.createElement('div')
+                cardTemplate.classList = 'mdc-card mdc-card-outlined'
+                cardTemplate.innerHTML = `<div class="my-card__media mdc-card__media mdc-card__media--16-9"><img src="${stationFavicon}" class="mdc-card__media-content" alt="Station Favicon" width="64" height="64"></div><span class="stationName">${stationName}</span><button data-playing="false" class="controls-play" role="switch" aria-checked="false"><span class="mdi mdi-play play"></span><audio src="${stationURL}"></audio></button>`
 
-                    content.append(cardTemplate)
-                }
+                content.append(cardTemplate)
 
-                /*console.log(elem)*/
+                console.log(elem)
             })
 
             const playButton = document.querySelectorAll('.controls-play');
@@ -35,9 +33,7 @@ searchSubmit.addEventListener('click', () => {
             const audio = document.querySelectorAll('audio')
 
             playButton.forEach((button, i) => {
-                console.log(button)
                 button.addEventListener('click', () => {
-                    console.log(i)
                     if (button.dataset.playing === 'false') {
                         audio[i].play();
                         button.dataset.playing = 'true'
