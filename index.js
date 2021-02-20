@@ -34,6 +34,7 @@ searchSubmit.addEventListener('click', () => {
 
             playButton.forEach((button, i) => {
                 button.addEventListener('click', () => {
+                    firebase.analytics().logEvent('play_button_clicked')
                     if (button.dataset.playing === 'false') {
                         audio[i].play();
                         button.dataset.playing = 'true'
