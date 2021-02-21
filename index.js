@@ -22,12 +22,13 @@ const content = document.querySelector('main.content')
 
 searchSubmit.addEventListener('click', () => {
     analytics.logEvent('search_radios')
-    const searchQuery = searcher.value
+    let searchQuery = searcher.value
     content.innerHTML = ""
 
     if(searchQuery === "" || searchQuery === "radio") {
         content.innerHTML = '<h1>Ta fraza wyszukiwania spowoduje, że twój komputer się zatnie. Nie rób tak więcej, proszę.</h1>'
     } else {
+        if(searchQuery === "/benchmark") searchQuery = ""
         fetch(`https://de1.api.radio-browser.info/json/stations/byname/${searchQuery}`)
             .then(response => response.json())
             .then(data => {
