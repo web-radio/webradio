@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
     apiKey: "AIzaSyAs4WSvyBoODJIi2VgBwZDZTwhRiBm3-e4",
     authDomain: "webradio-3904f.firebaseapp.com",
@@ -10,10 +10,10 @@ var firebaseConfig = {
     appId: "1:96382163337:web:15c8acd210a462da4b6958",
     measurementId: "G-6B26PSM2BT"
 };
-import * as firebase from 'firebase/app';
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const analytics = firebase.analytics();
-
+firebase.analytics();
+analytics = firebase.analytics()
 
 const searcher = document.querySelector('.searchInput')
 const searchSubmit = document.querySelector('.searchSubmit')
