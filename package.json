@@ -20,6 +20,7 @@
     "@material/card": "^10.0.0",
     "@material/textfield": "^10.0.0",
     "@material/top-app-bar": "^10.0.0",
-    "@mdi/font": "^5.9.55"
+    "@mdi/font": "^5.9.55",
+    "firebase": "^8.2.9"
   }
 }
