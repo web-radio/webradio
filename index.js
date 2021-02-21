@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
     apiKey: "AIzaSyAs4WSvyBoODJIi2VgBwZDZTwhRiBm3-e4",
     authDomain: "webradio-3904f.firebaseapp.com",
@@ -19,6 +19,8 @@ const searcher = document.querySelector('.searchInput')
 const searchSubmit = document.querySelector('.searchSubmit')
 
 const content = document.querySelector('main.content')
+
+const settingsButton = document.querySelector('.settings-button')
 
 searchSubmit.addEventListener('click', () => {
     analytics.logEvent('search_radios')
@@ -73,6 +75,9 @@ searchSubmit.addEventListener('click', () => {
         }
     })
 
+settingsButton.addEventListener('click', () => {
+    console.log('settings')
+})
 /*
 let lang
 const searchButton = document.getElementById("searchbutton");
@@ -123,38 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
             legacyInfo.textContent = data.legacyInfo
         })
 })
-
-searchButton.addEventListener("click", () => {
-    content.innerHTML = ''
-    if (searcher.value === "radios.json" || searcher.value === "all" || searcher.value === "wszystkie") {
-        fetch("https://raw.githubusercontent.com/web-radio/webradio/master/radios.json")
-            .then(response => response.json())
-            .then(data => {
-                data.forEach((elem) => {
-                    content.innerHTML += `<div><p>${elem.name}</p><audio src="${elem.src}" type="${elem.codec}" preload="none" class="radioElementLast" controls></audio></div>`
-                })
-                note.innerHTML = ""
-            })
-    } else if(searcher.value == "") {
-        content.style.display = "block";
-        content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">${lang.nothingHere}</p>`
-    } else {
-        fetch(`https://de1.api.radio-browser.info/json/stations/byname/${searcher.value}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length === 0) {
-                    content.style.display = "block";
-                    content.innerHTML += `<p style="margin-left:auto;margin-right:auto;">${lang.noStations}</p>`
-                    note.innerHTML = ""
-                } else {
-                    data.forEach((elem) => {
-                        content.style.display = "grid";
-                        content.innerHTML += `<div data-uuid="${elem.stationuuid}"><p>${elem.name}</p><p>Bitrate: ${elem.bitrate}kbps</p><audio src="${elem.url_resolved}" type="${elem.codec}" preload="none" controls></audio>`
-                    });
-                    note.innerHTML = `<p>${lang.bitrateInfo} <a style=\"display:inline\" href=\"https://en.wikipedia.org/wiki/Bit_rate\">bitrate</a>.</p>`
-                }
-            })
-    }
-});
-
 */

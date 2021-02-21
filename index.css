@@ -53,3 +53,7 @@ a {
 li {
     list-style: none;
 }
+
+.mdc-drawer {
+    z-index: 10000;
+}

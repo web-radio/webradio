@@ -34,7 +34,6 @@
     <header class="mdc-top-app-bar">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
                 <span class="mdc-top-app-bar__title">Webradio 2.0 prerelease</span>
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -44,7 +43,7 @@
                     <span class="mdc-line-ripple"></span>
                 </label>
                 <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button searchSubmit" aria-label="Search Submit">search</button>
-                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"><a href="https://github.com/web-radio/webradio">favorite</a></button>
+                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"><a href="https://github.com/web-radio/webradio">favorite</a></button><button class="material-icons mdc-top-app-bar__action-item mdc-icon-button settings-button" aria-label="Settings">settings</button>
             </section>
         </div>
     </header>
@@ -62,6 +61,7 @@
                 <li><i>Wynika to z błędów API. API jest otwarte i darmowe, więc każdy może dodać do niego stację radiową. Po prostu takie stacje zostały dodane dawno i/lub zostały tymczasowo wyłączono. Aktualnie pracujemy nad usunięciem z listy winików wyszukiwania stacji które nie działają.</i></li>
             </ul>
         </div>
+        <div class="pageSettings"></div>
     </main>
 </div>
 
@@ -77,6 +77,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     // Instantiation
     const topAppBarElement = document.querySelector('.mdc-top-app-bar');
     const topAppBar = new MDCTopAppBar(topAppBarElement);
+
 </script>
 <script src="index.js" type="application/javascript"></script>
 </body>
