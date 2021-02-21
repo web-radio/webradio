@@ -19,6 +19,7 @@
   "dependencies": {
     "@material/card": "^10.0.0",
     "@material/drawer": "^10.0.0",
+    "@material/switch": "^10.0.0",
     "@material/textfield": "^10.0.0",
     "@material/top-app-bar": "^10.0.0",
     "@mdi/font": "^5.9.55",

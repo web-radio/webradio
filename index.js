@@ -19,8 +19,15 @@ const searcher = document.querySelector('.searchInput')
 const searchSubmit = document.querySelector('.searchSubmit')
 
 const content = document.querySelector('main.content')
+const description = document.querySelector('.pageDescription')
+const settings = document.querySelector('.pageSettings')
+
+const card = document.querySelector('.mdc-card')
 
 const settingsButton = document.querySelector('.settings-button')
+const darkModeSwitcher = document.querySelector('#dark-mode-switch')
+const switchTop = document.querySelector('.switch-top')
+const closeButton = document.querySelector('.close-button')
 
 searchSubmit.addEventListener('click', () => {
     analytics.logEvent('search_radios')
@@ -77,7 +84,43 @@ searchSubmit.addEventListener('click', () => {
     })
 
 settingsButton.addEventListener('click', () => {
-    console.log('settings')
+    if(settingsButton.dataset.checked === 'false'){
+        description.style.display = 'none'
+        settings.style.display = 'block'
+        settingsButton.dataset.checked = 'true'
+    } else if(settingsButton.dataset.checked === 'true') {
+        description.style.display = 'block'
+        settings.style.display = 'none'
+        settingsButton.dataset.checked = 'false'
+    }
+})
+
+darkModeSwitcher.addEventListener('click', () => {
+    if(darkModeSwitcher.dataset.checked === 'false'){
+        darkModeSwitcher.checked = true
+        switchTop.classList = 'mdc-switch mdc-switch--checked switch-top'
+        darkModeSwitcher.dataset.checked = 'true'
+        document.body.style.background = '#121212'
+        document.body.style.color = '#fff'
+        card.style.background = '#121212'
+
+        localStorage.setItem('background', '#121212')
+        localStorage.setItem('color', '#fff')
+    } else if(darkModeSwitcher.dataset.checked === 'true') {
+        darkModeSwitcher.checked = true
+        switchTop.classList = 'mdc-switch switch-top'
+        darkModeSwitcher.dataset.checked = 'false'
+        document.body.style.background = '#fff'
+        document.body.style.color = '#121212'
+
+        localStorage.setItem('background', '#fff')
+        localStorage.setItem('color', '#121212')
+    }
+})
+
+closeButton.addEventListener('click', () => {
+    description.style.display = 'block'
+    settings.style.display = 'none'
 })
 /*
 let lang

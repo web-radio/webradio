@@ -43,7 +43,7 @@
                     <span class="mdc-line-ripple"></span>
                 </label>
                 <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button searchSubmit" aria-label="Search Submit">search</button>
-                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"><a href="https://github.com/web-radio/webradio">favorite</a></button><button class="material-icons mdc-top-app-bar__action-item mdc-icon-button settings-button" aria-label="Settings">settings</button>
+                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"><a href="https://github.com/web-radio/webradio">favorite</a></button><button data-checked="false" class="material-icons mdc-top-app-bar__action-item mdc-icon-button settings-button" aria-label="Settings">settings</button>
             </section>
         </div>
     </header>
@@ -61,7 +61,25 @@
                 <li><i>Wynika to z błędów API. API jest otwarte i darmowe, więc każdy może dodać do niego stację radiową. Po prostu takie stacje zostały dodane dawno i/lub zostały tymczasowo wyłączono. Aktualnie pracujemy nad usunięciem z listy winików wyszukiwania stacji które nie działają.</i></li>
             </ul>
         </div>
-        <div class="pageSettings"></div>
+        <div style="width: 100%; display: none;" class="pageSettings">
+            <div style="width: 90%; margin-left: auto; margin-right: auto;" class="mdc-card mdc-card--outlined">
+                <div class="mdc-switch switch-top">
+                    <div class="mdc-switch__track"></div>
+                    <div class="mdc-switch__thumb-underlay">
+                        <div class="mdc-switch__thumb"></div>
+                        <input type="checkbox" id="dark-mode-switch" class="mdc-switch__native-control" role="switch" data-checked="false" aria-checked="false">
+                    </div>
+                </div>
+                <label for="dark-mode-switch">Dark mode</label>
+
+                <div style="margin-left: auto; margin-top: auto;" class="mdc-card__actions">
+                    <button class="mdc-button mdc-card__action mdc-card__action--button close-button">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Zapisz</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
 </div>
 
@@ -78,6 +96,9 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     const topAppBarElement = document.querySelector('.mdc-top-app-bar');
     const topAppBar = new MDCTopAppBar(topAppBarElement);
 
+    import {MDCSwitch} from '@material/switch';
+
+    const switchControl = new MDCSwitch(document.querySelector('.mdc-switch'));
 </script>
 <script src="index.js" type="application/javascript"></script>
 </body>
