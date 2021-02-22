@@ -49,7 +49,7 @@ searchSubmit.addEventListener('click', () => {
 
                     const cardTemplate = document.createElement('div')
                     cardTemplate.classList = 'mdc-card mdc-card-outlined'
-                    cardTemplate.innerHTML = `<div class="my-card__media mdc-card__media mdc-card__media--16-9"><img src="${stationFavicon}" class="mdc-card__media-content" alt="Station Favicon" width="64" height="64"></div><span class="stationName">${stationName}</span><button data-playing="false" class="controls-play" role="switch" aria-checked="false"><span class="mdi mdi-play play"></span><audio src="${stationURL}"></audio></button>`
+                    cardTemplate.innerHTML = `<div class="my-card__media mdc-card__media mdc-card__media--16-9"><img src="${stationFavicon}" class="mdc-card__media-content" alt="Station Favicon" width="64" height="64"></div><span class="stationName">${stationName}</span><button data-playing="false" data-radioname="${stationName}" class="controls-play" role="switch" aria-checked="false"><span class="mdi mdi-play play"></span><audio src="${stationURL}"></audio></button>`
 
                     content.append(cardTemplate)
                 })
@@ -59,14 +59,15 @@ searchSubmit.addEventListener('click', () => {
                 const audio = document.querySelectorAll('audio')
 
                 playButton.forEach((button, i) => {
-                    analytics.logEvent('play_radio')
                     button.addEventListener('click', () => {
                         if (button.dataset.playing === 'false') {
+                            analytics.logEvent('start_playing_radio', { stationName: button.dataset.radioname })
                             audio[i].play();
                             button.dataset.playing = 'true'
                             icon[i].classList = 'mdi mdi-pause pause'
                             // if track is playing pause it
                         } else if (button.dataset.playing === 'true') {
+                            analytics.logEvent('stop_playing_radio', { stationName: button.dataset.radioname })
                             audio[i].pause();
                             button.dataset.playing = 'false'
                             icon[i].classList = 'mdi mdi-play play'
@@ -102,7 +103,7 @@ darkModeSwitcher.addEventListener('click', () => {
         document.body.style.color = '#fff'
         document.documentElement.style.setProperty('--card-background', '#121212')
 
-        localStorage.setItem('cardBackground', '#121212')
+        localStorage.setItem('cardBackground', '#121212') // TODO: Przechowywać takie ustawienia w jednym obiekcie
         localStorage.setItem('background', '#121212')
         localStorage.setItem('color', '#fff')
     } else if(darkModeSwitcher.dataset.checked === 'true') {
