@@ -101,10 +101,14 @@ darkModeSwitcher.addEventListener('click', () => {
         darkModeSwitcher.dataset.checked = 'true'
         document.body.style.background = '#121212'
         document.body.style.color = '#fff'
-        document.documentElement.style.setProperty('--card-background', '#121212')
+        document.documentElement.style.setProperty('--mdc-theme-surface', '#121212')
+        document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', '#fff')
+        document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', '#fff')
 
-        localStorage.setItem('cardBackground', '#121212') // TODO: Przechowywać takie ustawienia w jednym obiekcie
-        localStorage.setItem('background', '#121212')
+        localStorage.setItem('iconColor', '#fff')
+        localStorage.setItem('textPrimary', '#fff')
+        localStorage.setItem('surface', '#121212')
+        localStorage.setItem('background', '#121212')// TODO: Przechowywać takie ustawienia w jednym obiekcie
         localStorage.setItem('color', '#fff')
     } else if(darkModeSwitcher.dataset.checked === 'true') {
         darkModeSwitcher.checked = true
@@ -112,9 +116,13 @@ darkModeSwitcher.addEventListener('click', () => {
         darkModeSwitcher.dataset.checked = 'false'
         document.body.style.background = '#fff'
         document.body.style.color = '#121212'
-        document.documentElement.style.setProperty('--card-background', '#fff')
+        document.documentElement.style.setProperty('--mdc-theme-surface', '#fff')
+        document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', '#121212')
+        document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', '#9f9f9f')
 
-        localStorage.setItem('cardBackground', '#fff')
+        localStorage.setItem('iconColor', '#9f9f9f')
+        localStorage.setItem('textPrimary', '#121212')
+        localStorage.setItem('surface', '#fff')
         localStorage.setItem('background', '#fff')
         localStorage.setItem('color', '#121212')
     }
@@ -126,10 +134,12 @@ closeButton.addEventListener('click', () => {
 })
 
 window.addEventListener('load', () =>  {
-    if(localStorage.getItem('background') && localStorage.getItem('color') && localStorage.getItem('cardBackground')) {
+    if(localStorage.getItem('background') && localStorage.getItem('color') && localStorage.getItem('surface') && localStorage.getItem('textPrimary') && localStorage.getItem('iconColor')) {
         document.body.style.background = localStorage.getItem('background')
         document.body.style.color = localStorage.getItem('color')
-        document.documentElement.style.setProperty('--card-background', localStorage.getItem('cardBackground'))
+        document.documentElement.style.setProperty('--mdc-theme-surface', localStorage.getItem('surface'))
+        document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', localStorage.getItem('textPrimary'))
+        document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', localStorage.getItem('iconColor'))
         if(localStorage.getItem('background') != '#fff') {
             switchTop.classList = 'mdc-switch mdc-switch--checked switch-top'
             darkModeSwitcher.dataset.checked = 'true'
@@ -138,7 +148,9 @@ window.addEventListener('load', () =>  {
     } else {
         localStorage.setItem('background', '#fff')
         localStorage.setItem('color', '#121212')
-        localStorage.setItem('cardBackground', '#fff')
+        localStorage.setItem('surface', '#fff')
+        localStorage.setItem('textPrimary', '#121212')
+        localStorage.setItem('iconColor', '#9f9f9f')
     }
 })
 /*

@@ -10,6 +10,10 @@ body {
     color: #121212;
 }
 
+.container {
+    height: 100% !important;
+}
+
 .content {
     display: flex !important;
     flex-flow: row wrap;
@@ -36,7 +40,6 @@ span.mdi {
     height: 200px;
     padding: 10px;
     flex: 1 300px;
-    background: var(--card-background) !important;
 }
 
 .mdc-card__media {
@@ -62,4 +65,8 @@ li {
 
 .mdc-drawer {
     z-index: 10000;
+}
+
+.mdc-switch {
+    margin-left: auto !important;
 }

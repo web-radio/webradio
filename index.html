@@ -63,18 +63,33 @@
                 <li><i>Wynika to z błędów API. API jest otwarte i darmowe, więc każdy może dodać do niego stację radiową. Po prostu takie stacje zostały dodane dawno i/lub zostały tymczasowo wyłączono. Aktualnie pracujemy nad usunięciem z listy winików wyszukiwania stacji które nie działają.</i></li>
             </ul>
         </div>
-        <div style="width: 100%; display: none;" class="pageSettings">
-            <div style="width: 90%; margin-left: auto; margin-right: auto;" class="mdc-card mdc-card--outlined">
-                <div class="mdc-switch switch-top">
-                    <div class="mdc-switch__track"></div>
-                    <div class="mdc-switch__thumb-underlay">
-                        <div class="mdc-switch__thumb"></div>
-                        <input type="checkbox" id="dark-mode-switch" class="mdc-switch__native-control" role="switch" data-checked="false" aria-checked="false">
-                    </div>
-                </div>
-                <label for="dark-mode-switch">Dark mode</label>
+        <div style="height: 100%; width: 100%; display: none;" class="pageSettings">
+            <div style="height: 90%; width: 90%; margin-left: auto; margin-right: auto;" class="mdc-card mdc-card--outlined">
+                <!--
                 <br>
-                Starsza wersja - tylko wybrane stacje, bez wyszukiwania <a href="legacy/legacy.html">OTWÓRZ</a>
+                Starsza wersja - tylko wybrane stacje, bez wyszukiwania <a href="legacy/legacy.html">OTWÓRZ</a>-->
+                <ul class="mdc-list">
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__graphic material-icons">dark_mode</span>
+                        <span class="mdc-list-item__text">Dark mode</span>
+                        <div class="mdc-switch switch-top" style="margin-left: auto; width: 90%;" >
+                            <div class="mdc-switch__track"></div>
+                            <div class="mdc-switch__thumb-underlay">
+                                <div class="mdc-switch__thumb"></div>
+                                <input style="float: right;" type="checkbox" id="dark-mode-switch" class="mdc-switch__native-control" role="switch" data-checked="false" aria-checked="false" aria-label="Dark mode">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mdc-list-item">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__text">Single-line item</span>
+                    </li>
+                    <li class="mdc-list-item">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__text">Single-line item</span>
+                    </li>
+                </ul>
                 <div style="margin-left: auto; margin-top: auto;" class="mdc-card__actions">
                     <button class="mdc-button mdc-card__action mdc-card__action--button close-button">
                         <div class="mdc-button__ripple"></div>
@@ -102,6 +117,10 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     import {MDCSwitch} from '@material/switch';
 
     const switchControl = new MDCSwitch(document.querySelector('.mdc-switch'));
+
+    import {MDCList} from '@material/list';
+
+    const list = new MDCList(document.querySelector('.mdc-list'));
 </script>
 <script src="index.js" type="application/javascript"></script>
 </body>
