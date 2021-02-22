@@ -22,8 +22,6 @@ const content = document.querySelector('main.content')
 const description = document.querySelector('.pageDescription')
 const settings = document.querySelector('.pageSettings')
 
-const card = document.querySelector('.mdc-card')
-
 const settingsButton = document.querySelector('.settings-button')
 const darkModeSwitcher = document.querySelector('#dark-mode-switch')
 const switchTop = document.querySelector('.switch-top')
@@ -102,8 +100,9 @@ darkModeSwitcher.addEventListener('click', () => {
         darkModeSwitcher.dataset.checked = 'true'
         document.body.style.background = '#121212'
         document.body.style.color = '#fff'
-        card.style.background = '#121212'
+        document.documentElement.style.setProperty('--card-background', '#121212')
 
+        localStorage.setItem('cardBackground', '#121212')
         localStorage.setItem('background', '#121212')
         localStorage.setItem('color', '#fff')
     } else if(darkModeSwitcher.dataset.checked === 'true') {
@@ -112,7 +111,9 @@ darkModeSwitcher.addEventListener('click', () => {
         darkModeSwitcher.dataset.checked = 'false'
         document.body.style.background = '#fff'
         document.body.style.color = '#121212'
+        document.documentElement.style.setProperty('--card-background', '#fff')
 
+        localStorage.setItem('cardBackground', '#fff')
         localStorage.setItem('background', '#fff')
         localStorage.setItem('color', '#121212')
     }
@@ -121,6 +122,23 @@ darkModeSwitcher.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
     description.style.display = 'block'
     settings.style.display = 'none'
+})
+
+window.addEventListener('load', () =>  {
+    if(localStorage.getItem('background') && localStorage.getItem('color') && localStorage.getItem('cardBackground')) {
+        document.body.style.background = localStorage.getItem('background')
+        document.body.style.color = localStorage.getItem('color')
+        document.documentElement.style.setProperty('--card-background', localStorage.getItem('cardBackground'))
+        if(localStorage.getItem('background') != '#fff') {
+            switchTop.classList = 'mdc-switch mdc-switch--checked switch-top'
+            darkModeSwitcher.dataset.checked = 'true'
+
+        }
+    } else {
+        localStorage.setItem('background', '#fff')
+        localStorage.setItem('color', '#121212')
+        localStorage.setItem('cardBackground', '#fff')
+    }
 })
 /*
 let lang

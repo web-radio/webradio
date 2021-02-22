@@ -1,3 +1,7 @@
+:root {
+    --card-background: #fff
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,6 +36,7 @@ span.mdi {
     height: 200px;
     padding: 10px;
     flex: 1 300px;
+    background: var(--card-background) !important;
 }
 
 .mdc-card__media {
