@@ -28,8 +28,8 @@ const switchTop = document.querySelector('.switch-top')
 const closeButton = document.querySelector('.close-button')
 
 searchSubmit.addEventListener('click', () => {
-    analytics.logEvent('search_radios')
     let searchQuery = searcher.value
+    analytics.logEvent('search_radios', { query: searchQuery })
     content.innerHTML = ""
 
     if(searchQuery === "" || searchQuery === "radio") {
