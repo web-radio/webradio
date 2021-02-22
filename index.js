@@ -18,16 +18,19 @@ analytics = firebase.analytics()
 const searcher = document.querySelector('.searchInput')
 const searchSubmit = document.querySelector('.searchSubmit')
 
-const content = document.querySelector('main.content')
+const content = document.querySelector('.content')
 const description = document.querySelector('.pageDescription')
 const settings = document.querySelector('.pageSettings')
 
-const settingsButton = document.querySelector('.settings-button')
+const settingsBtn = document.querySelector('.settings-button')
 const darkModeSwitcher = document.querySelector('#dark-mode-switch')
 const switchTop = document.querySelector('.switch-top')
-const closeButton = document.querySelector('.close-button')
+const closeBtn = document.querySelector('.close-button')
+
+const contributorsBtn = document.querySelector('.contributorsButton')
 
 searchSubmit.addEventListener('click', () => {
+    description.style.display = 'none'
     let searchQuery = searcher.value
     analytics.logEvent('search_radios', { query: searchQuery })
     content.innerHTML = ""
@@ -82,15 +85,18 @@ searchSubmit.addEventListener('click', () => {
         }
     })
 
-settingsButton.addEventListener('click', () => {
-    if(settingsButton.dataset.checked === 'false'){
-        description.style.display = 'none'
-        settings.style.display = 'block'
-        settingsButton.dataset.checked = 'true'
-    } else if(settingsButton.dataset.checked === 'true') {
+settingsBtn.addEventListener('click', () => {
+    content.innerHTML = ''
+    if(settingsBtn.dataset.checked === 'true') {
+        content.style.display = 'none'
         description.style.display = 'block'
         settings.style.display = 'none'
-        settingsButton.dataset.checked = 'false'
+        settingsBtn.dataset.checked = 'false'
+    } else if(settingsBtn.dataset.checked === 'false'){
+        content.style.display = 'none'
+        description.style.display = 'none'
+        settings.style.display = 'block'
+        settingsBtn.dataset.checked = 'true'
     }
 })
 
@@ -128,7 +134,7 @@ darkModeSwitcher.addEventListener('click', () => {
     }
 })
 
-closeButton.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
     description.style.display = 'block'
     settings.style.display = 'none'
 })
@@ -152,6 +158,10 @@ window.addEventListener('load', () =>  {
         localStorage.setItem('textPrimary', '#121212')
         localStorage.setItem('iconColor', '#9f9f9f')
     }
+})
+
+contributorsBtn.addEventListener('click', () => {
+
 })
 /*
 let lang
