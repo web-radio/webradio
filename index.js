@@ -30,11 +30,13 @@ const searchSubmit = document.querySelector('.searchSubmit')
 const content = document.querySelector('.content')
 const description = document.querySelector('.pageDescription')
 const settings = document.querySelector('.pageSettings')
+const contributors = document.querySelector('.pageContributors')
 
 const settingsBtn = document.querySelector('.settings-button')
 const darkModeSwitcher = document.querySelector('#dark-mode-switch')
 const switchTop = document.querySelector('.switch-top')
 const closeBtn = document.querySelector('.close-button')
+const backBtn = document.querySelector('.back-button')
 
 const contributorsBtn = document.querySelector('.contributorsButton')
 
@@ -179,7 +181,15 @@ window.addEventListener('load', () =>  {
 })
 
 contributorsBtn.addEventListener('click', () => {
+    content.style.display = 'none'
+    description.style.display = 'none'
+    settings.style.display = 'none'
+    contributors.style.display = 'block'
+})
 
+backBtn.addEventListener('click', () => {
+    settings.style.display = 'block'
+    contributors.style.display = 'none'
 })
 /*
 let lang

@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f7410627-964d-4f12-8889-856f82a267e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +85,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adef6\Projekty\webradio" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adef6\Projekty\webradio" />
     </key>
@@ -121,7 +125,7 @@
       <workItem from="1614014685490" duration="3551000" />
       <workItem from="1614027896845" duration="3095000" />
       <workItem from="1614064089335" duration="597000" />
-      <workItem from="1614110256888" duration="1243000" />
+      <workItem from="1614110256888" duration="3720000" />
     </task>
     <servers />
   </component>
