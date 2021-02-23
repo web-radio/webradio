@@ -15,6 +15,15 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 analytics = firebase.analytics()
 
+Storage.prototype.setObject = function(key, value) {
+    this.setItem(key, JSON.stringify(value));
+}
+
+Storage.prototype.getObject = function(key) {
+    var value = this.getItem(key);
+    return value && JSON.parse(value);
+} // Stackoverflow goes brrrr
+
 const searcher = document.querySelector('.searchInput')
 const searchSubmit = document.querySelector('.searchSubmit')
 
@@ -111,11 +120,14 @@ darkModeSwitcher.addEventListener('click', () => {
         document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', '#fff')
         document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', '#fff')
 
-        localStorage.setItem('iconColor', '#fff')
-        localStorage.setItem('textPrimary', '#fff')
-        localStorage.setItem('surface', '#121212')
-        localStorage.setItem('background', '#121212')// TODO: Przechowywać takie ustawienia w jednym obiekcie
-        localStorage.setItem('color', '#fff')
+        localStorage.setItem('settings', JSON.stringify({
+            'iconColor': "#fff",
+            'primaryTextColor': "#fff",
+            'cssTextColor': "#fff",
+            'cssBackgroundColor': "#121212",
+            'surfaceColor': "#121212"
+        }))
+
     } else if(darkModeSwitcher.dataset.checked === 'true') {
         darkModeSwitcher.checked = true
         switchTop.classList = 'mdc-switch switch-top'
@@ -126,11 +138,13 @@ darkModeSwitcher.addEventListener('click', () => {
         document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', '#121212')
         document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', '#9f9f9f')
 
-        localStorage.setItem('iconColor', '#9f9f9f')
-        localStorage.setItem('textPrimary', '#121212')
-        localStorage.setItem('surface', '#fff')
-        localStorage.setItem('background', '#fff')
-        localStorage.setItem('color', '#121212')
+        localStorage.setItem('settings', JSON.stringify({
+            "iconColor": "#9f9f9f",
+            "primaryTextColor": "#121212",
+            "cssTextColor": "#121212",
+            "cssBackgroundColor": "#fff",
+            "surfaceColor": "#fff"
+        }))
     }
 })
 
@@ -140,23 +154,27 @@ closeBtn.addEventListener('click', () => {
 })
 
 window.addEventListener('load', () =>  {
-    if(localStorage.getItem('background') && localStorage.getItem('color') && localStorage.getItem('surface') && localStorage.getItem('textPrimary') && localStorage.getItem('iconColor')) {
-        document.body.style.background = localStorage.getItem('background')
-        document.body.style.color = localStorage.getItem('color')
-        document.documentElement.style.setProperty('--mdc-theme-surface', localStorage.getItem('surface'))
-        document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', localStorage.getItem('textPrimary'))
-        document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', localStorage.getItem('iconColor'))
-        if(localStorage.getItem('background') != '#fff') {
+    window.settingsValues = JSON.parse(localStorage.getItem('settings'))
+
+    if(settingsValues.cssBackgroundColor && settingsValues.cssTextColor && settingsValues.surfaceColor && settingsValues.primaryTextColor && settingsValues.iconColor) {
+        document.body.style.background = settingsValues.cssBackgroundColor
+        document.body.style.color = settingsValues.cssTextColor
+        document.documentElement.style.setProperty('--mdc-theme-surface', settingsValues.surfaceColor)
+        document.documentElement.style.setProperty('--mdc-theme-text-primary-on-background', settingsValues.primaryTextColor)
+        document.documentElement.style.setProperty('--mdc-theme-text-icon-on-background', settingsValues.iconColor)
+        if(settingsValues.cssBackgroundColor !== '#fff') {
             switchTop.classList = 'mdc-switch mdc-switch--checked switch-top'
             darkModeSwitcher.dataset.checked = 'true'
 
         }
     } else {
-        localStorage.setItem('background', '#fff')
-        localStorage.setItem('color', '#121212')
-        localStorage.setItem('surface', '#fff')
-        localStorage.setItem('textPrimary', '#121212')
-        localStorage.setItem('iconColor', '#9f9f9f')
+        localStorage.setItem('settings', {
+            iconColor: '#9f9f9f',
+            primaryTextColor: '#121212',
+            cssTextColor: '#121212',
+            cssBackgroundColor: '#fff',
+            surfaceColor: '#fff'
+        })
     }
 })
 
