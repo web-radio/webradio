@@ -39,7 +39,7 @@ const closeBtn = document.querySelector('.close-button')
 const backBtn = document.querySelector('.back-button')
 
 const contributorsBtn = document.querySelector('.contributorsButton')
-const contirbutorList = document.querySelector('.contributorList')
+const contributorList = document.querySelector('.contributorList')
 
 searchSubmit.addEventListener('click', () => {
     description.style.display = 'none'
@@ -194,12 +194,14 @@ contributorsBtn.addEventListener('click', () => {
                 if (contributor.login == 'MarcinK50' || contributor.login == 'Lambada10') {
                     console.log('maintainer')
                 } else {
-                    const listItem = document.createElement('li')
-                    listItem.classList = 'mdc-list-item'
-                    listItem.tabIndex = 0
-                    listItem.innerHTML = `<span class="mdc-list-item__ripple"></span><span class="mdc-list-item__graphic"><img width="40" height="40" src="${contributor.avatar_url}" alt="doteq avatar" style="border-radius: 100px; border: none;"></span><span class="mdc-list-item__text">${contributor.login}</span>`
+                    if (contributorList.childElementCount >= 0) {
+                        const listItem = document.createElement('li')
+                        listItem.classList = 'mdc-list-item'
+                        listItem.tabIndex = 0
+                        listItem.innerHTML = `<span class="mdc-list-item__ripple"></span><span class="mdc-list-item__graphic"><img width="40" height="40" src="${contributor.avatar_url}" alt="doteq avatar" style="border-radius: 100px; border: none;"></span><span class="mdc-list-item__text">${contributor.login}</span>`
 
-                    contirbutorList.append(listItem)
+                        contributorList.append(listItem)
+                    }
                 }
             })
         })
