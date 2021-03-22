@@ -50,7 +50,7 @@ searchSubmit.addEventListener('click', () => {
     if(searchQuery === "" || searchQuery === "radio") {
         content.innerHTML = '<h1>Ta fraza wyszukiwania spowoduje, że twój komputer się zatnie. Nie rób tak więcej, proszę.</h1>'
     } else {
-        if(searchQuery === "/benchmark") searchQuery = ""
+        if(searchQuery === "/benchmark") searchQuery = "" // easter-egg
         fetch(`https://de1.api.radio-browser.info/json/stations/byname/${searchQuery}`)
             .then(response => response.json())
             .then(data => {
@@ -182,6 +182,7 @@ window.addEventListener('load', () =>  {
 })
 
 contributorsBtn.addEventListener('click', () => {
+    contributorList.innerHTML = ''
     content.style.display = 'none'
     description.style.display = 'none'
     settings.style.display = 'none'
@@ -198,7 +199,7 @@ contributorsBtn.addEventListener('click', () => {
                         const listItem = document.createElement('li')
                         listItem.classList = 'mdc-list-item'
                         listItem.tabIndex = 0
-                        listItem.innerHTML = `<span class="mdc-list-item__ripple"></span><span class="mdc-list-item__graphic"><img width="40" height="40" src="${contributor.avatar_url}" alt="doteq avatar" style="border-radius: 100px; border: none;"></span><span class="mdc-list-item__text">${contributor.login}</span>`
+                        listItem.innerHTML = `<a href="${contributor.html_url}"><span class="mdc-list-item__ripple"></span><span class="mdc-list-item__graphic"><img width="40" height="40" src="${contributor.avatar_url}" alt="${contributor.login} avatar" style="border-radius: 100px; border: none;"></span><span class="mdc-list-item__text">${contributor.login}</span></a>`
 
                         contributorList.append(listItem)
                     }
