@@ -1,165 +1,102 @@
-<!DOCTYPE HTML>
-<html lang="pl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>Webradio</title>
-    <meta name="description" content="Strona z radiami internetowymi">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name=robots content="index,follow">
-    <meta name="keywords" content="radio, radia internetowe, web-radio, webradio, web-radio.cf, RMF FM">
-    <meta name="author" content="Webradio team">
-    <meta name="subject" content="Radia interentowe">
-    <meta name="copyright" content="Webradio(c)">
-    <meta name='Classification' content='Open-source'>
-    <meta name='url' content='https://web-radio.cf'>
-    <meta http-equiv='Expires' content='0'>
-    <meta http-equiv='Pragma' content='no-cache'>
-    <meta http-equiv='Cache-Control' content='no-cache'>
-    <meta http-equiv='imagetoolbar' content='no'>
-    <meta http-equiv='x-dns-prefetch-control' content='off'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webradio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="index.css" type="text/css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+    .bd-example {
+        position: relative;
+        margin: 1rem -.75rem 0;
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+        border: solid #dee2e6;
+        border-top-width: medium;
+        border-right-width: medium;
+        border-bottom-width: medium;
+        border-left-width: medium;
+        border-width: 1px 0 0;
+    }
+    .bd-example {
+        padding: 1.5rem;
+        margin-right: 0;
+        margin-left: 0;
+        border-width: 1px;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+    }
+    .play-btn {
+        background: none;
+        border: none;
+    }
+    .spin {
+        animation: 1.5 linear infinite loader;
+        animation-play-state: inherit;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    </style>
 </head>
 <body>
-<div id="container">
-
-    <header class="mdc-top-app-bar">
-        <div class="mdc-top-app-bar__row">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">
-                    <a href="/">home</a></button> <!-- that's not working on localhost; TODO: fix this -->
-                <span class="mdc-top-app-bar__title">Webradio 2.0 prerelease</span>
-            </section>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label">
-                    <span class="mdc-text-field__ripple"></span>
-                    <input class="mdc-text-field__input searchInput" type="text" placeholder="RMF FM" aria-label="Label">
-                    <span class="mdc-line-ripple"></span>
-                </label>
-                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button searchSubmit" aria-label="Search Submit">search</button>
-                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"><a href="https://github.com/web-radio/webradio">favorite</a></button><button data-checked="false" class="material-icons mdc-top-app-bar__action-item mdc-icon-button settings-button" aria-label="Settings">settings</button>
-            </section>
-        </div>
-    </header>
-    <main class="mdc-top-app-bar--fixed-adjust">
-        <div class="content">
-
-        </div>
-        <div class="pageDescription">
-            <h2>Oh. Czyli znalazłeś tą stronę? Co teraz?</h2>
-            <p>Cześć! Jeśli udało ci się znaleźć tą stronę w ogromnym internecie, to znaczy, że:</p>
-            <ul>
-                <li>A. Lubisz słuchać radia</li>
-                <li>B. To jest twoje p r z e z n a c z e n i e</li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="bi-speaker d-inline-block"></i> <strong>Webradio</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Strona Główna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Co to jest?</a>
+              </li>
             </ul>
-            <h3>FAQ(Często Zadawane Pytania)</h3>
-            <ul>
-                <li><b>Dlaczego wyświetla się kilka takich samych stacji i/lub niektóre z nich nie działają?</b></li>
-                <li><i>Wynika to z błędów API. API jest otwarte i darmowe, więc każdy może dodać do niego stację radiową. Po prostu takie stacje zostały dodane dawno i/lub zostały tymczasowo wyłączono. Aktualnie pracujemy nad usunięciem z listy winików wyszukiwania stacji które nie działają.</i></li>
-            </ul>
-        </div>
-        <div style="height: 100%; width: 100%; display: none;" class="pageSettings">
-            <div style="height: 90%; width: 90%; margin-left: auto; margin-right: auto;" class="mdc-card mdc-card--outlined">
-                <!--
-                <br>
-                Starsza wersja - tylko wybrane stacje, bez wyszukiwania <a href="legacy/legacy.html">OTWÓRZ</a>-->
-                <ul class="mdc-list">
-                    <li class="mdc-list-item" tabindex="0">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic material-icons">dark_mode</span>
-                        <span class="mdc-list-item__text">Dark mode</span>
-                        <div class="mdc-switch switch-top" style="margin-left: auto; width: 90%;" >
-                            <div class="mdc-switch__track"></div>
-                            <div class="mdc-switch__thumb-underlay">
-                                <div class="mdc-switch__thumb"></div>
-                                <input style="float: right;" type="checkbox" id="dark-mode-switch" class="mdc-switch__native-control" role="switch" data-checked="false" aria-checked="false" aria-label="Dark mode">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mdc-list-item  contributorsButton">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic material-icons">people</span>
-                        <span class="mdc-list-item__text">Twórcy</span>
-                    </li><li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic material-icons">developer_mode</span>
-                        <span class="mdc-list-item__text">Ustawienia deweloperskie</span>
-                    </li>
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic material-icons">info</span>
-                        <span class="mdc-list-item__text">Informacje</span>
-                    </li>
-                </ul>
-                <div style="margin-left: auto; margin-top: auto;" class="mdc-card__actions">
-                    <button class="mdc-button mdc-card__action mdc-card__action--button close-button">
-                        <div class="mdc-button__ripple"></div>
-                        <span class="mdc-button__label">Zapisz</span>
-                    </button>
-                </div>
+            <div class="d-flex">
+              <input class="form-control me-2 search-field" type="search" placeholder="RMF FM" aria-label="Wyszukaj radia">
+              <button class="btn btn-outline-success btn-submit" type="submit">Wyszukaj</button>
             </div>
+          </div>
         </div>
+      </nav>
 
-        <div style="height: 100%; width: 100%; display: none;" class="pageContributors">
-            <div style="height: 90%; width: 90%; margin-left: auto; margin-right: auto;" class="mdc-card mdc-card--outlined">
-                <!--
-                <br>
-                Starsza wersja - tylko wybrane stacje, bez wyszukiwania <a href="legacy/legacy.html">OTWÓRZ</a>-->
-                <p>Główni pomysłodawcy</p>
-                <ul class="mdc-list maintainerList">
-                    <li class="mdc-list-item" tabindex="0">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic"><img width="40" height="40" src="https://avatars.githubusercontent.com/MarcinK50" alt="MarcinK50 avatar" style="border-radius: 100px; border: none;"></span>
-                        <span class="mdc-list-item__text">MarcinK50</span>
-                    </li>
-                    <li class="mdc-list-item" tabindex="0">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic"><img width="40" height="40" src="https://avatars.githubusercontent.com/Lambada10" alt="Lambada10 avatar" style="border-radius: 100px; border: none;"></span>
-                        <span class="mdc-list-item__text">Lambada10</span>
-                    </li>
-                </ul>
-                <p>Współtwórcy <3</p>
-                <ul class="mdc-list contributorList"></ul>
-                <div style="margin-left: auto; margin-top: auto;" class="mdc-card__actions">
-                    <button class="mdc-button mdc-card__action mdc-card__action--button back-button">
-                        <div class="mdc-button__ripple"></div>
-                        <span class="mdc-button__label">Wróć</span>
-                    </button>
+      <div class="wrapper">
+          <section class="featured-stations">
+            <h1 class="display-6 m-3">Proponowane stacje radiowe</h1>
+
+            <div class="bd-example m-3 p-3 container" style="height: 200px; min-width: 98%;">
+              <div class="row featured-stations-container" style="height: 100%;">
+                <!-- TEMPLATE STATIONS ONLY FOR TESTING <div class="bd-example h-100 m-1 col-xs-6" style="width: 175px;">
+                  <img src="http://www.rmfon.pl/i/logos/100x100/rmf.png" alt="RMF FM logo" width="75" height="75" class="rounded mx-auto d-block">
+                  <span class="mx-auto d-inline-block" style="font-size: 0.9rem;">RMF FM</span><br>
+                  <button class="play-btn d-block mx-auto"><i class="bi-play" style="font-size: 1.5rem;"></i></button>
                 </div>
+                <div class="bd-example h-100 m-1 col-xs-6" style="width: 175px;">
+                  <img src="https://mytuner.global.ssl.fastly.net/media/tvos_radios/d7cncggk4dvq.jpg" alt="RMF FM logo" width="75" height="75" class="rounded mx-auto d-block">
+                  <span class="mx-auto d-inline-block" style="font-size: 0.9rem;">Radio Nowy Świat</span><br>
+                  <button class="play-btn d-block mx-auto"><i class="bi-play" style="font-size: 1.5rem;"></i></button>
+                </div> -->
+                <!-- stations generated from featured-radios.json comes here -->
+              </div>
             </div>
-        </div>
-    </main>
-</div>
+          </section>
+          
+          <section class="search-result" style="display: none;">
+            <h1 class="display-6 m-3 search-result-header">Wyniki wyszukiwania dla: "RMF FM"</h1>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+            <div class="bd-example m-3 p-3 container" style="height: 80vh; min-width: 98%;">
+              <div class="row search-result-container">
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+              </div>
+            </div>
+          </section>
+      </div>
 
-<script>
-    import {MDCTopAppBar} from '@material/top-app-bar';
-    // Instantiation
-    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-    const topAppBar = new MDCTopAppBar(topAppBarElement);
-
-    import {MDCSwitch} from '@material/switch';
-
-    const switchControl = new MDCSwitch(document.querySelector('.mdc-switch'));
-
-    import {MDCList} from '@material/list';
-
-    const list = new MDCList(document.querySelector('.mdc-list'));
-</script>
-<script src="index.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
-</html>
+</htmli>

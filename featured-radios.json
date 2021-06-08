@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "name": "RMF FM",
+        "icon": "http://www.rmfon.pl/i/logos/100x100/rmf.png",
+        "link": "http://195.150.20.9/RMFFM48"
+    },
+    {
+        "id": 1,
+        "name": "Radio Nowy świat",
+        "icon": "https://mytuner.global.ssl.fastly.net/media/tvos_radios/d7cncggk4dvq.jpg",
+        "link": "https://n12.rcs.revma.com/ypqt40u0x1zuv?rj-ttl=5&rj-tok=AAABeect65gAp-ayyf8dAhnI8A"
+        
+    },
+    {
+        "id": 2,
+        "name": "Radio Zet",
+        "icon": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.18169-9/25289754_10155979951279530_8958948036807350002_n.png?_nc_cat=1&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=dtMIPrhIY10AX_X_lWf&_nc_ht=scontent-frx5-1.xx&oh=10f3a3360e6418b540202a1e24c67c85&oe=60E4AAF8",
+        "link": "https://zt01.cdn.eurozet.pl/zet-old.mp3"
+    },
+    {
+        "id": 3,
+        "name": "Polskie Radio Czwórka",
+        "icon": "https://moje.polskieradio.pl/_img/kanaly/pr4.jpg",
+        "link": "http://stream3.polskieradio.pl:8906/;stream"
+    }
+]
