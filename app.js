@@ -1,7 +1,7 @@
 const featuredStationsContainer = document.getElementsByClassName('featured-stations-container')[0]
 
 // FEATURED STATIONS
-fetch('http://localhost:5500/featured-radios.json')
+fetch('https://raw.githubusercontent.com/web-radio/webradio/master/featured-radios.json')
   .then(response => response.json())
   .then(data => {
     const featuredRadios = data
