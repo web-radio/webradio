@@ -67,7 +67,7 @@ submitBtn.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
         console.log(data)
-        searchResultContainer.innerHTML = "" // REMOVE SEARCH RESULT CONTAINER HTML !VERY IMPORTANT!       
+        searchResultContainer.innerHTML = "" // REMOVE SEARCH RESULT CONTAINER HTML
         data.forEach(radio => {
             // UI PART
             searchResultHeader.innerText = `Wyniki wyszukiwania dla "${searchedRadio}"`
