@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "Radio Zet",
-        "icon": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.18169-9/25289754_10155979951279530_8958948036807350002_n.png?_nc_cat=1&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=dtMIPrhIY10AX_X_lWf&_nc_ht=scontent-frx5-1.xx&oh=10f3a3360e6418b540202a1e24c67c85&oe=60E4AAF8",
+        "icon": "https://prowly-uploads.s3.eu-west-1.amazonaws.com/uploads/4587/assets/46969/radio_zet_rozszerzony_rgb_red_72dpi.png",
         "link": "https://zt01.cdn.eurozet.pl/zet-old.mp3"
     },
     {
@@ -23,5 +23,11 @@
         "name": "Polskie Radio Czwórka",
         "icon": "https://moje.polskieradio.pl/_img/kanaly/pr4.jpg",
         "link": "http://stream3.polskieradio.pl:8906/;stream"
+    },
+    {
+        "id": 4,
+        "name": "Tesla Radio",
+        "icon": "https://cdn.discordapp.com/attachments/856278493465935872/873335095367454810/teslaradio.png",
+        "link": "http://teslaradio.ddns.net:8000/stream.ogg"
     }
 ]
