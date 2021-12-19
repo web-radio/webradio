@@ -96,12 +96,17 @@
    },
    {
       "name":"PR Koszalin",
-      "src":"http://s0.radiohost.pl:8240/;",
+      "src":"http://s0.radiohost.pl:9680/;",
       "type":"audio/mp3"
    },
    {
       "name":"PR Pomorza i Kujaw",
       "src":"http://stream.radiopik.pl:9004/;",
+      "type":"audio/mp3"
+   },
+   {
+      "name":"PR Słupsk",
+      "src":"http://s0.radiohost.pl:8240/;",
       "type":"audio/mp3"
    },
    {
