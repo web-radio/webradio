@@ -26,8 +26,8 @@
     },
     {
         "id": 4,
-        "name": "Tesla Radio",
-        "icon": "https://cdn.discordapp.com/attachments/856278493465935872/873335095367454810/teslaradio.png",
-        "link": "http://teslaradio.ddns.net:8000/stream.ogg"
+        "name": "Radio SUR",
+        "icon": "https://i.imgur.com/rgzBp75.png",
+        "link": "https://sur.radio.fm/stream_320.mp3"
     }
 ]
