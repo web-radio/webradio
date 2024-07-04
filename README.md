@@ -1,6 +1,6 @@
 
-# Radio
-Strona z radiami internetowymi.
+# Radio [stara wersja]
+Nowa wersja: [web-radio/web-radio.github.io](https://github.com/web-radio/web-radio.github.io)
 
 # Schemat dodania stacji radiowej
 Jeśli chcesz dodać stację radiową której nie ma na poniższej liście możesz użyć tego schematu w radios.json:
